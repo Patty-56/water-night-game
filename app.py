@@ -13,12 +13,12 @@ def save_progress(data):
         json.dump(data, f, indent=4)
 
 # Streamlit 頁面設定
-st.set_page_config(page_title="水色之夜：整合版", layout="centered")
+st.set_page_config(page_title="水色之夜", layout="centered")
 
 st.sidebar.title("🎭 選擇角色")
-role = st.sidebar.radio("請選擇要扮演的角色：", ["甯（設計組）", "逸晨（程式組）", "芊芊（音效組）"])
+role = st.sidebar.radio("請選擇要扮演的角色：", ["甯", "逸晨", "芊芊"])
 
-st.title("🌌 水色之夜：健康解謎專題整合版")
+st.title("🌌 水色之夜")
 st.markdown("---")
 st.markdown(f"#### 🎮 目前角色：**{role}**")
 
