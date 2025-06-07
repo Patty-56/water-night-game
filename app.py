@@ -1,16 +1,3 @@
-import streamlit as st
-import json
-import os
-
-# 初始化進度
-if not os.path.exists("data"):
-    os.makedirs("data")
-if not os.path.exists("data/progress.json"):
-    with open("data/progress.json", "w") as f:
-        json.dump({
-            "current_day": 1,
-            "max_day": 1,
-            "story_unlocked": [],
             "last_result": "none",
             "user_data": {}
         }, f, indent=4)
@@ -101,4 +88,3 @@ if st.checkbox("📖 顯示當前日劇情（開發用）"):
             st.text(f.read())
     else:
         st.info("今天的劇情尚未建立。")
-
